@@ -1,0 +1,99 @@
+.post-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.post-user-id {
+  font-weight: bold;
+  color: #555;
+}
+.post-title {
+  margin: 12px 0;
+  .post-paragraph {
+    color: #666;
+    line-height: 1.6;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.form-container {
+  background-color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .form-container {
+    width: 33%;
+  }
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+form button {
+  margin-top: 1rem;
+}
+.cancel-button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.cancel-button {
+  background-color: #f8f9fa;
+  color: #333;
+  padding: 0%;
+  margin: 0%;
+  display: inline-block;
+  position: relative;
+  top: -20px;
+  left: 10px;
+}
+
+.post-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+
+.blur-background {
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

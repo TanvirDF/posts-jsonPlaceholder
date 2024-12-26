@@ -15,11 +15,11 @@ This project is a simple React web application that interacts with a public API 
 
 1. Fetch Posts:
    - Fetches posts from https://jsonplaceholder.typicode.com/posts using useGetPostsQuery (RTK Query).
-   - displays the all the posts in a grid format inside the PostCard component.
+   - displays all the posts in a grid format inside the PostCard component.
 2. Add New Post:
-   - Provides a pop-up form to add new post when the add post button is clicked on the header.
+   - Provides a pop-up form to add new posts when the add post button is clicked on the header.
    - The post is sent to the API using useAddPostMutation.
-   - The form handles success and error states based on the API response. ( since the json server is not updated with the new data a consol log is displayed to show the response).
+   - The form handles success and error states based on the API response. ( since the JSON server is not updated with the new data a console log is displayed to show the response).
 
 ## Step-by-step Breakdown:
 
@@ -32,14 +32,14 @@ This project is a simple React web application that interacts with a public API 
 
 2. Redux Store Configuration
 
-   - The store was created inside store.ts and configured to include the postApi reducer and middleware for handling RTK Query API calls.This enables caching, automatic refetching, and API call management.
+   - The store was created inside store.ts and configured to include the postApi reducer and middleware for handling RTK Query API calls. This enables caching, automatic refetching, and API call management.
 
 3. Fetching and displaying the data:
 
-   - At first the app is wrapped around the Provider with the store passed to it.
-   - The posts are fetched using useGetPostsQuery hook in the App component. Handing the loading and error state.
-   - Once the data is successfully loaded, they are rendered in the a grid format inside PostCard component.
+   - The app is first wrapped around the Provider with the store passed to it.
+   - The posts are fetched using the useGetPostsQuery hook in the App component. Handing the loading and error state.
+   - Once the data is successfully loaded, they are rendered in the grid format inside the PostCard component.
 
 4. Adding a new Posts:
-   - To add a post a button is added at the header of the app. It pops up a form component called PostForm which allows user to add new post
-   - useAddPostMutation hook triggers the POST request and consol logs the server’s response and handles the loading, success and error states.
+   - To add a post, a button is added at the app's header. It pops up a form component called PostForm which allows the user to add new post
+   - useAddPostMutation hook triggers the POST request and the console logs the server’s response and handles the loading, success, and error states.

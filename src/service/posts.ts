@@ -8,7 +8,7 @@ export const postsApi = createApi({
     getPosts: builder.query({
       query: () => `/posts`,
     }),
-      addPosts: builder.mutation<Post, Partial<Post>>({
+      addPost: builder.mutation<Post, Partial<Post>>({
           query: (newPost) => ({
                 url: '/posts',
                 method: 'POST',
@@ -22,4 +22,4 @@ export const postsApi = createApi({
   
 })
 
-export const { useGetPostsQuery, useAddPostsMutation } = postsApi
+export const { useGetPostsQuery, useAddPostMutation } = postsApi

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { useAddPostsMutation } from '../service/posts';
+import { useAddPostMutation } from '../service/posts';
 
 interface PostFormProps {
     toggleAddPostVisibility: () => void
@@ -11,7 +11,7 @@ const PostForm: React.FC<PostFormProps> = ({ toggleAddPostVisibility }) => {
     const [title, setTitle] = useState('')
     const [body, setBody] = useState('')
     
-    const [addPost, { isLoading, isSuccess, isError }] = useAddPostsMutation()
+    const [addPost, { isLoading, isSuccess, isError }] = useAddPostMutation()
 
     const formValidation = () => {
         if (userId < 1 || userId > 10) {
